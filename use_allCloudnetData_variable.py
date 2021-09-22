@@ -3152,7 +3152,7 @@ def main():
 
     elif machine =='LEEDS':
         ### Set output directory for plots
-        plots_out_dir='/nfs/a96/MOCCHA/working/jutta/plots/CaseStudies/ModelComparison/'
+        plots_out_dir='/nfs/a96/MOCCHA/working/gillian/PLOTS/CaseStudy/'
         if not os.path.exists(plots_out_dir):
             os.makedirs(plots_out_dir)
 
