@@ -3139,7 +3139,7 @@ def main():
     obs_switch = 'UM' #RADAR
 
     if machine =='JASMIN':
-        plots_out_dir='/gws/nopw/j04/ncas_radar_vol1/jutta/PLOTS/CaseStudy/'
+        plots_out_dir='/gws/nopw/j04/ncas_radar_vol1/gillian/PLOTS/CaseStudy/'
         if not os.path.exists(plots_out_dir):
             os.makedirs(plots_out_dir)
 
@@ -3152,7 +3152,7 @@ def main():
 
     elif machine =='LEEDS':
         ### Set output directory for plots
-        plots_out_dir='/nfs/a96/MOCCHA/working/gillian/PLOTS/CaseStudy/'
+        plots_out_dir='/nfs/a96/MOCCHA/working/jutta/plots/CaseStudies/ModelComparison/'
         if not os.path.exists(plots_out_dir):
             os.makedirs(plots_out_dir)
 
