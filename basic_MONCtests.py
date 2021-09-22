@@ -223,6 +223,7 @@ def plot_basicTests( monc_data, monc_spin, plots_out_dir, moutstr, mlabel, m_out
     plt.xlabel('U [m/s]')
     plt.ylim([0,2.5e3])
     plt.title('t=0h')
+    plt.legend()
     plt.subplot(142)
     if np.size(monc_data[0]['u_wind_mean'],0) >= st_id:
         plt.plot(data['sonde']['u'], data['sonde']['Z'], 'k--')
