@@ -111,9 +111,9 @@ def calc_TWC(thresholding, **args):
         if pum==True:
             m=0 # use first um model run for height grid definition
             twc_thresh_um = np.zeros([np.size(um_data[m]['model_twc'],1)])
-            um_lt1km = np.where(um_data[m][lwc_zvar[m]][:]<=1e3)
+            um_lt1km = np.where(um_data[m]['height'][:]<=1e3)
             twc_thresh_um[um_lt1km] = 1e-6
-            um_lt1km = np.where(um_data[m][lwc_zvar[m]][:]>=4e3)
+            um_lt1km = np.where(um_data[m]['height'][:]>=4e3)
             twc_thresh_um[um_lt1km] = 1e-7
             um_intZs = np.where(twc_thresh_um == 0.0)
 
@@ -122,7 +122,7 @@ def calc_TWC(thresholding, **args):
             y = [1e3, 4e3]
             f = interp1d(y, x)
             for m in range(0,len(um_data)):
-                twc_thresh_um[um_intZs] = f(um_data[m][lwc_zvar[m]][um_intZs].data)
+                twc_thresh_um[um_intZs] = f(um_data[m]['height'][um_intZs].data)
 
             for t in range(0,np.size(um_data[m]['model_twc'],0)):
                 for k in range(0,np.size(um_data[m]['model_twc'],1)):
@@ -3295,9 +3295,9 @@ def main():
                # '27C_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper/',
                # '27C_CASIMvn0.3.4-MONCr8166-test/',
                # '27D_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_FixedNd25/',
-               #'27E_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_FixedNd10/',
+               '27E_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_FixedNd10/',
                #'27F_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_FixedNd5/',
-               '30A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/',
+               # '30A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/',
                # '28A_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_AccumSolAero-CASIM-100-ARG/',
                # '28B_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_AccumSolAero-CASIM-100-Twomey/'
                # '29A_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_AccumSolAero-CASIM-20-ARG/',
@@ -3307,7 +3307,7 @@ def main():
                # '32A_20180913T0000Z_8hSpinUp_Geostroph-MeanSonde_8-24h0.1Cooper_FixedNd10/',
                '33A_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
                ]
-            
+
     #################################################################
     ## create labels for figure legends - done here so only needs to be done once!
     #################################################################
