@@ -543,6 +543,9 @@ def main():
         elif m_out_dir[m][:3] == '32A':
             mlabel.append('MONC_0.1Cooper_FixedNd10_GeoSondes')
             moutstr.append('MONC-32A')
+        elif m_out_dir[m][:3] == '33A':
+            mlabel.append('MONC_0.1Cooper_FixedNd10_timevarTurbFluxes')
+            moutstr.append('MONC-33A')            
         else:
             label.append('undefined_label')
             moutstr.append('')
