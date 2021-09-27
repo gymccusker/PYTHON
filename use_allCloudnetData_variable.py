@@ -3307,8 +3307,7 @@ def main():
                # '32A_20180913T0000Z_8hSpinUp_Geostroph-MeanSonde_8-24h0.1Cooper_FixedNd10/',
                '33A_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
                ]
-            #'4_control_20180913T0000Z_Wsub-1.5/',
-            ]
+            
     #################################################################
     ## create labels for figure legends - done here so only needs to be done once!
     #################################################################
