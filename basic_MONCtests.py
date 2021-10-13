@@ -447,7 +447,8 @@ def main():
                # '31A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/',
                # '32A_20180913T0000Z_8hSpinUp_Geostroph-MeanSonde_8-24h0.1Cooper_FixedNd10/',
                # '33A_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
-               '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
+               # '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
+               '34A-r9196_20180913T0000Z_timevarTurbFluxes_reducedZ0/',
                ]
             #'4_control_20180913T0000Z_Wsub-1.5/',
     #################################################################
@@ -547,13 +548,16 @@ def main():
         elif m_out_dir[m][:3] == '33A':
             mlabel.append('MONC_0.1Cooper_FixedNd10_timevarTurbFluxes')
             moutstr.append('MONC-33A')
+        elif m_out_dir[m][:3] == '34A':
+            mlabel.append('MONC_0.1Cooper_FixedNd10_timevarTurbFluxes_reducedZ0')
+            moutstr.append('MONC-34A')
         else:
             label.append('undefined_label')
             moutstr.append('')
 
     #---- MONC SPIN UP TIME
     spin6 = ['26']
-    spin8 = ['27','28','29','30','31','32','33']
+    spin8 = ['27','28','29','30','31','32','33','34']
 
     if m_out_dir[0][:2] in spin6:
         monc_spin = 6 *60 *60
