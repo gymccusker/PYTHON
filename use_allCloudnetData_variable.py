@@ -3305,10 +3305,11 @@ def main():
                # '30A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/',
                # '31A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/',
                # '32A_20180913T0000Z_8hSpinUp_Geostroph-MeanSonde_8-24h0.1Cooper_FixedNd10/',
-               '33A_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
-               # '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
+               # '33A_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
+               '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
                # '34A-r9196_20180913T0000Z_timevarTurbFluxes_reducedZ0/',
-               '35A-r8917_20180913T0000Z_timevarTurbFluxes_geostrophYdt-0pt5/',
+               # '35A-r8917_20180913T0000Z_timevarTurbFluxes_geostrophYdt-0pt5/',
+               '36A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes/',
                ]
 
     #################################################################
@@ -3439,6 +3440,9 @@ def main():
         elif m_out_dir[m][:3] == '35A':
             mlabel.append('MONC_0.1Cooper_FixedNd10_timevarTurbFluxes_geostrophdYdt')
             moutstr.append('MONC-35A')
+        elif m_out_dir[m][:3] == '36A':
+            mlabel.append('MONC_0.1Cooper_CASIM-100-accSolAero_timevarTurbFluxes')
+            moutstr.append('MONC-36A')
         else:
             label.append('undefined_label')
             moutstr.append('')
