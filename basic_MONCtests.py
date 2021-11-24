@@ -556,13 +556,16 @@ def main():
         elif m_out_dir[m][:3] == '35A':
             mlabel.append('MONC_0.1Cooper_FixedNd10_timevarTurbFluxes_geostrophdYdt')
             moutstr.append('MONC-35A')
+        elif m_out_dir[m][:3] == '36A':
+            mlabel.append('MONC_0.1Cooper_CASIM-100-accSolAero_timevarTurbFluxes')
+            moutstr.append('MONC-36A')
         else:
             label.append('undefined_label')
             moutstr.append('')
 
     #---- MONC SPIN UP TIME
     spin6 = ['26']
-    spin8 = ['27','28','29','30','31','32','33','34','35']
+    spin8 = ['27','28','29','30','31','32','33','34','35','36']
 
     if m_out_dir[0][:2] in spin6:
         monc_spin = 6 *60 *60
