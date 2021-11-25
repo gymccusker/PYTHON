@@ -450,8 +450,8 @@ def main():
                # '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
                # '34A-r9196_20180913T0000Z_timevarTurbFluxes_reducedZ0/',
                # '35A-r8917_20180913T0000Z_timevarTurbFluxes_geostrophYdt-0pt5/',
-               '36A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes/',
-               # '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
+               # '36A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes/',
+               '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
                ]
             #'4_control_20180913T0000Z_Wsub-1.5/',
     #################################################################
