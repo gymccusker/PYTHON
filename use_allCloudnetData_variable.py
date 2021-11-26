@@ -3290,7 +3290,7 @@ def main():
                # '25_20180913T0000Z_20h0600-0000thTend/'
                # '26A_20180913T0000Z_6hSpinUp_12h0600-0000thTend_20h1200-0600thTend_6-20h0.1Cooper/',
                # '26B_20180913T0000Z_6hSpinUp_12h0600-0000thTend_20h1200-0600thTend_6-20h0-Cooper/',
-               '27A_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24hCooper/',
+               # '27A_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24hCooper/',
                # '27B_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.5Cooper/',
                # '27C_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper/',
                # '27C_CASIMvn0.3.4-MONCr8166-test/',
@@ -3306,10 +3306,11 @@ def main():
                # '31A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/',
                # '32A_20180913T0000Z_8hSpinUp_Geostroph-MeanSonde_8-24h0.1Cooper_FixedNd10/',
                # '33A_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
-               '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
+               # '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
                # '34A-r9196_20180913T0000Z_timevarTurbFluxes_reducedZ0/',
                # '35A-r8917_20180913T0000Z_timevarTurbFluxes_geostrophYdt-0pt5/',
                '36A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes/',
+               '36B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes/',
                '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
                ]
 
@@ -3444,6 +3445,9 @@ def main():
         elif m_out_dir[m][:3] == '36A':
             mlabel.append('MONC_Cooper_CASIM-100-accSolAero_timevarTurbFluxes')
             moutstr.append('MONC-36A')
+        elif m_out_dir[m][:3] == '36B':
+            mlabel.append('MONC_0.1Cooper_CASIM-100-accSolAero_timevarTurbFluxes')
+            moutstr.append('MONC-36B')
         elif m_out_dir[m][:3] == '37A':
             mlabel.append('MONC_Cooper_CASIM-100-accSolAero_timevarTurbFluxes_passProc')
             moutstr.append('MONC-37A')
