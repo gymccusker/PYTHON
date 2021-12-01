@@ -3468,6 +3468,9 @@ def main():
         elif m_out_dir[m][:3] == '39A':
             mlabel.append('MONC_CASIM-AP-accSolAero_timevarTurbFluxes_passProc')
             moutstr.append('MONC-39A')
+        elif m_out_dir[m][:3] == '39B':
+            mlabel.append('MONC_0.1Cooper_CASIM-AP-accSolAero_timevarTurbFluxes_passProc')
+            moutstr.append('MONC-39B')            
         else:
             label.append('undefined_label')
             moutstr.append('')
