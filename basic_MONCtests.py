@@ -453,7 +453,8 @@ def main():
                # '36A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes/',
                # '36B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes/',
                # '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
-               '37B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
+               # '37B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
+               '38A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes/',
                ]
             #'4_control_20180913T0000Z_Wsub-1.5/',
     #################################################################
@@ -571,13 +572,22 @@ def main():
         elif m_out_dir[m][:3] == '37B':
             mlabel.append('MONC_0.1Cooper_CASIM-100-accSolAero_timevarTurbFluxes_passProc')
             moutstr.append('MONC-37B')
+        elif m_out_dir[m][:3] == '38A':
+            mlabel.append('MONC_CASIM-AP-accSolAero_timevarTurbFluxes')
+            moutstr.append('MONC-38A')
+        elif m_out_dir[m][:3] == '38B':
+            mlabel.append('MONC_0.1Cooper_CASIM-AP-accSolAero_timevarTurbFluxes')
+            moutstr.append('MONC-38B')
+        elif m_out_dir[m][:3] == '39A':
+            mlabel.append('MONC_CASIM-AP-accSolAero_timevarTurbFluxes_passProc')
+            moutstr.append('MONC-39A')
         else:
             label.append('undefined_label')
             moutstr.append('')
 
     #---- MONC SPIN UP TIME
     spin6 = ['26']
-    spin8 = ['27','28','29','30','31','32','33','34','35','36','37']
+    spin8 = ['27','28','29','30','31','32','33','34','35','36','37','38','39']
 
     if m_out_dir[0][:2] in spin6:
         monc_spin = 6 *60 *60
