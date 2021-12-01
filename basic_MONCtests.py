@@ -454,7 +454,8 @@ def main():
                # '36B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes/',
                # '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
                # '37B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
-               '38A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes/',
+               # '38A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes/',
+               '38B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes/',
                ]
             #'4_control_20180913T0000Z_Wsub-1.5/',
     #################################################################
