@@ -464,9 +464,9 @@ def plot_T_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon, l
     dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_T-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_T-profile'  + '_split.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_T-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_T-profile'  + '_split.svg'
 
     plt.savefig(fileout,dpi=300)
     print ('')
@@ -2159,8 +2159,8 @@ def main():
 
     out_dir = ['23_u-cc278_RA1M_CASIM/',
                '30_u-cg179_RA1M_CASIM/',
-               '26_u-cd847_RA1M_CASIM/',
-               '27_u-ce112_RA1M_CASIM/'
+               # '26_u-cd847_RA1M_CASIM/',
+               # '27_u-ce112_RA1M_CASIM/'
               ]
 #    out_dir = [  '30_u-cg179_RA1M_CASIM/' ]
     ### CHOOSE MONC RUNS
@@ -2169,7 +2169,21 @@ def main():
                 # '27D_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_FixedNd25/',
                 # '27E_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_FixedNd10/',
                 # '27F_20180913T0000Z_8hSpinUp_14h0600-0000thTend_24h1200-0600thTend_8-24h0.1Cooper_FixedNd5/',
-                '30A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/'
+                # '30A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/'
+               # '31A_20180913T0000Z_8hSpinUp_8-14hUVRelax0600_14-24hUVRelax1200_8-24h0.1Cooper_FixedNd10/',
+               # '32A_20180913T0000Z_8hSpinUp_Geostroph-MeanSonde_8-24h0.1Cooper_FixedNd10/',
+               # '33A_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
+               # '33A-2_20180913T0000Z_8hSpinUp_0.1Cooper_FixedNd10_timevarTurbFluxes/',
+               # '34A-r9196_20180913T0000Z_timevarTurbFluxes_reducedZ0/',
+               # '35A-r8917_20180913T0000Z_timevarTurbFluxes_geostrophYdt-0pt5/',
+               # '36A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes/',
+               '36B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes/',
+               # '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
+               '37B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
+               # # '38A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes/',
+               # '38B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes/',
+               # # '39A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes_passProc/',
+               # '39B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
                 ]
     # m_out_dir = ['5_control_20180913T0000Z_Wsub-1.5_Fletcher/',
     #             '6_control_20180913T0000Z_Wsub-1.5-1km/',
