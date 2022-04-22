@@ -3310,9 +3310,9 @@ def main():
                # '34A-r9196_20180913T0000Z_timevarTurbFluxes_reducedZ0/',
                # '35A-r8917_20180913T0000Z_timevarTurbFluxes_geostrophYdt-0pt5/',
                # '36A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes/',
-               '36B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes/',
+               # '36B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes/',
                # '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
-               '37B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
+               # '37B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
                # # '38A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes/',
                # '38B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes/',
                # # '39A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes_passProc/',
@@ -3479,10 +3479,11 @@ def main():
     spin6 = ['26']
     spin8 = ['27','28','29','30','31','32','33','34','35','36','37','38','39']
 
-    if m_out_dir[0][:2] in spin6:
-        monc_spin = 6 *60 *60
-    elif m_out_dir[0][:2] in spin8:
-        monc_spin = 8 *60 *60
+    if len(m_out_dir) > 0:
+        if m_out_dir[0][:2] in spin6:
+            monc_spin = 6 *60 *60
+        elif m_out_dir[0][:2] in spin8:
+            monc_spin = 8 *60 *60
 
     ### -----------------------------------------------------------------
     ### create monc filenames
