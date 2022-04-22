@@ -2117,7 +2117,8 @@ def main():
     machine = 'JASMIN'
 
     if machine =='JASMIN':
-        plots_out_dir='/gws/nopw/j04/ncas_radar_vol1/jutta/PLOTS/CaseStudy/'
+        ### SET OUTPUT DIRECTORY FOR PLOTS
+        plots_out_dir='/gws/nopw/j04/ncas_radar_vol1/gillian/PLOTS/CaseStudy/'
         if not os.path.exists(plots_out_dir):
             os.makedirs(plots_out_dir)
         um_root_dir = '/gws/nopw/j04/ncas_radar_vol1/gillian/UM/DATA/'
@@ -2134,8 +2135,7 @@ def main():
         monc_root_dir = '/gws/nopw/j04/ncas_radar_vol1/gillian/MONC/output/'
         #monc_avg_dir = '/gws/nopw/j04/ncas_radar_vol1/jutta/MONC/output/'
         monc_avg_dir = '/gws/nopw/j04/ncas_radar_vol1/gillian/MONC/output/'
-        ### SET OUTPUT DIRECTORY FOR PLOTS
-        plot_out_dir = '/gws/nopw/j04/ncas_radar_vol1/jutta/PLOTS/CaseStudy/'
+        # plot_out_dir = '/gws/nopw/j04/ncas_radar_vol1/jutta/PLOTS/CaseStudy/'
 
     elif machine =='LEEDS':
     ### INPUT FOLDERS
