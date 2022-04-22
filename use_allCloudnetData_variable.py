@@ -3274,8 +3274,8 @@ def main():
     #           '25_u-cc568_RA2M_CON/']
     out_dir = ['23_u-cc278_RA1M_CASIM/',
                '30_u-cg179_RA1M_CASIM/',
-                '26_u-cd847_RA1M_CASIM/',
-                '27_u-ce112_RA1M_CASIM/',
+                # '26_u-cd847_RA1M_CASIM/',
+                # '27_u-ce112_RA1M_CASIM/',
                ]
 
     # out_dir = ['23_u-cc278_RA1M_CASIM/']
@@ -3313,10 +3313,10 @@ def main():
                '36B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes/',
                # '37A_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_timevarTurbFluxes_passProc/',
                '37B_20180913T0000Z_8hSpin-up_vCASIM-100-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
-               # '38A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes/',
-               '38B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes/',
-               # '39A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes_passProc/',
-               '39B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
+               # # '38A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes/',
+               # '38B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes/',
+               # # '39A_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_timevarTurbFluxes_passProc/',
+               # '39B_20180913T0000Z_8hSpin-up_vCASIM-AP-accSolAero_v0.1Cooper_timevarTurbFluxes_passProc/',
                ]
 
     #################################################################
@@ -3470,7 +3470,7 @@ def main():
             moutstr.append('MONC-39A')
         elif m_out_dir[m][:3] == '39B':
             mlabel.append('MONC_0.1Cooper_CASIM-AP-accSolAero_timevarTurbFluxes_passProc')
-            moutstr.append('MONC-39B')            
+            moutstr.append('MONC-39B')
         else:
             label.append('undefined_label')
             moutstr.append('')
