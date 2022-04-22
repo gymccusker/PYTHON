@@ -2135,7 +2135,7 @@ def main():
         monc_root_dir = '/gws/nopw/j04/ncas_radar_vol1/gillian/MONC/output/'
         #monc_avg_dir = '/gws/nopw/j04/ncas_radar_vol1/jutta/MONC/output/'
         monc_avg_dir = '/gws/nopw/j04/ncas_radar_vol1/gillian/MONC/output/'
-        # plot_out_dir = '/gws/nopw/j04/ncas_radar_vol1/jutta/PLOTS/CaseStudy/'
+        plot_out_dir = '/gws/nopw/j04/ncas_radar_vol1/gillian/PLOTS/CaseStudy/'
 
     elif machine =='LEEDS':
     ### INPUT FOLDERS
