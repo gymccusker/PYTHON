@@ -2209,6 +2209,8 @@ def main():
             monc_spin = 6 *60 *60
         elif m_out_dir[0][:2] in spin8:
             monc_spin = 8 *60 *60
+    else:
+        monc_spin = 0
 
     #---- SPLIT PROFILES IN TIME JUNKS
     prof_time=[[dates[0], dates[0]+4/24],
@@ -2400,7 +2402,7 @@ def main():
     ## -------------------------------------------------------------
     ## remove spin up time from monc data
     ## -------------------------------------------------------------
-    monc_data=removeSpinUp(monc_data,monc_spin)
+    if len(m_out_dir) > 0: monc_data=removeSpinUp(monc_data,monc_spin)
 
     ## -------------------------------------------------------------
     ## convert monc time to datenum
@@ -2667,25 +2669,26 @@ def main():
     ### T profiles: hatpro, sondes
     ### wind profiles: halo, sondes
     #interpolate hatpro data to monc_grid
-    var_list_int = ['temperature','pottemp','rh']
-    monc_height=np.array(monc_data[0][monc_data[0]['zvar']['T_mean']])
-    for var in var_list_int:
-        aint = np.ones((obs['hatpro_temp'][var].shape[1],monc_height.shape[0]))*np.NaN
-        interp_var = interp1d(np.squeeze(obs['hatpro_temp']['Z']), np.squeeze(np.transpose(obs['hatpro_temp'][var])))
-        aint[:,2:] = interp_var(monc_height[2:])
-        obs['hatpro_temp'][var]=aint
-    obs['hatpro_temp']['Z_org']=np.squeeze(obs['hatpro_temp']['Z'])
-    obs['hatpro_temp']['Z']= monc_height
-    #interpolate halo data to monc_grid
-    var_list_int = ['ws','wd','u','v' ]
-    monc_height=np.array(monc_data[0][monc_data[0]['zvar']['u_wind_mean']])
-    for var in var_list_int:
-        aint = np.ones((obs['halo'][var].shape[1],monc_height.shape[0]))*np.NaN
-        interp_var = interp1d(np.squeeze(np.transpose(obs['halo']['height'][:,0])), np.squeeze(np.transpose(obs['halo'][var])))
-        aint[:,5:] = interp_var(monc_height[5:])
-        obs['halo'][var]=aint
-    obs['halo']['height_org']=np.squeeze(obs['halo']['height'])
-    obs['halo']['height']= monc_height
+    if len(m_out_dir) > 0:
+        var_list_int = ['temperature','pottemp','rh']
+        monc_height=np.array(monc_data[0][monc_data[0]['zvar']['T_mean']])
+        for var in var_list_int:
+            aint = np.ones((obs['hatpro_temp'][var].shape[1],monc_height.shape[0]))*np.NaN
+            interp_var = interp1d(np.squeeze(obs['hatpro_temp']['Z']), np.squeeze(np.transpose(obs['hatpro_temp'][var])))
+            aint[:,2:] = interp_var(monc_height[2:])
+            obs['hatpro_temp'][var]=aint
+        obs['hatpro_temp']['Z_org']=np.squeeze(obs['hatpro_temp']['Z'])
+        obs['hatpro_temp']['Z']= monc_height
+        #interpolate halo data to monc_grid
+        var_list_int = ['ws','wd','u','v' ]
+        monc_height=np.array(monc_data[0][monc_data[0]['zvar']['u_wind_mean']])
+        for var in var_list_int:
+            aint = np.ones((obs['halo'][var].shape[1],monc_height.shape[0]))*np.NaN
+            interp_var = interp1d(np.squeeze(np.transpose(obs['halo']['height'][:,0])), np.squeeze(np.transpose(obs['halo'][var])))
+            aint[:,5:] = interp_var(monc_height[5:])
+            obs['halo'][var]=aint
+        obs['halo']['height_org']=np.squeeze(obs['halo']['height'])
+        obs['halo']['height']= monc_height
 
     #interpolate dissipation data to monc_grid
     ## done in plot_tke_profiles_split after quality control of the data
