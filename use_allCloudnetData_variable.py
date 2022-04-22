@@ -3814,7 +3814,7 @@ def main():
     ## -------------------------------------------------------------
     ## remove spin up time from monc data
     ## -------------------------------------------------------------
-    monc_data=removeSpinUp(monc_data,monc_spin)
+    if len(m_out_dir) > 0: monc_data=removeSpinUp(monc_data,monc_spin)
 
     ## -------------------------------------------------------------
     ## convert monc time to datenum
