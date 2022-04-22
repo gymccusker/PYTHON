@@ -2204,10 +2204,11 @@ def main():
     spin6 = ['26']
     spin8 = ['27','28','29','30','31','32','33','34','35','36','37','38','39']
 
-    if m_out_dir[0][:2] in spin6:
-        monc_spin = 6 *60 *60
-    elif m_out_dir[0][:2] in spin8:
-        monc_spin = 8 *60 *60
+    if len(m_out_dir) > 0:
+        if m_out_dir[0][:2] in spin6:
+            monc_spin = 6 *60 *60
+        elif m_out_dir[0][:2] in spin8:
+            monc_spin = 8 *60 *60
 
     #---- SPLIT PROFILES IN TIME JUNKS
     prof_time=[[dates[0], dates[0]+4/24],
