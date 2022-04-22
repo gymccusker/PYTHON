@@ -1360,10 +1360,10 @@ def plot_tke_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon,
         obs['dissR']['epsilon_corr']=np.transpose(a)
         obs['dissR']['height']=obs['dissR']['Rranges']*1000
 
-        ###########################
-        ylims=[0,2]
-        yticks=np.arange(0,2e3,0.5e3)
-        ytlabels=yticks/1e3
+    ###########################
+    ylims=[0,2]
+    yticks=np.arange(0,2e3,0.5e3)
+    ytlabels=yticks/1e3
 
     print ('******')
     print ('')
