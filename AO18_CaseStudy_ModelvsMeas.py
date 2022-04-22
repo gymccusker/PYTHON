@@ -132,7 +132,7 @@ def plot_surfaceVariables(obs, plot_out_dir, dates,**args  ):
     print ('')
 
     date=datenum2date(dates[0])
-    fileout = os.path.join(plot_out_dir,date.strftime('%Y%m%d') + '_surfaceVariables_ts.png')
+    fileout = os.path.join(plot_out_dir,date.strftime('%Y%m%d') + '_surfaceVariables_ts.svg')
     plt.savefig(fileout)
 
 def plot_lwp(obs_data, plot_out_dir, dates,**args ):
@@ -213,7 +213,7 @@ def plot_lwp(obs_data, plot_out_dir, dates,**args ):
     print ('')
 
     date=datenum2date(datenum)
-    fileout = os.path.join(plot_out_dir,date.strftime('%Y%m%d') + '_lwp_ts.png')
+    fileout = os.path.join(plot_out_dir,date.strftime('%Y%m%d') + '_lwp_ts.svg')
     plt.savefig(fileout)
 
 def plot_BLDepth_SMLDepth(obs_data, plot_out_dir, dates,**args ):
@@ -335,7 +335,7 @@ def plot_BLDepth_SMLDepth(obs_data, plot_out_dir, dates,**args ):
     print ('Finished plotting! :)')
     print ('')
     dstr=datenum2date(dates[0])
-    fileout = os.path.join(plot_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_BLdepth-SML.png')
+    fileout = os.path.join(plot_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_BLdepth-SML.svg')
     plt.savefig(fileout)
     plt.show()
 
@@ -870,9 +870,9 @@ def plot_q_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon, l
         dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' '_'.join(outstr) + '_' +'_'.join(moutstr) + '_q-profile'  + '_models_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' '_'.join(outstr) + '_' +'_'.join(moutstr) + '_q-profile'  + '_models_split.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' + '_q-profile'  + '_models_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' + '_q-profile'  + '_models_split.svg'
 
     plt.savefig(fileout,dpi=300)
     print ('')
@@ -954,9 +954,9 @@ def plot_q_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon, l
     dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_q-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_q-profile'  + '_split.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_q-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_q-profile'  + '_split.svg'
 
     plt.savefig(fileout,dpi=300)
     print ('')
@@ -1098,9 +1098,9 @@ def plot_wind_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon
     dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_ws-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_ws-profile'  + '_split.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_ws-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_ws-profile'  + '_split.svg'
     plt.savefig(fileout,dpi=300)
     #####  WD   ########
     plt.figure(figsize=(18,8))
@@ -1167,9 +1167,9 @@ def plot_wind_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon
     dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_wd-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_wd-profile'  + '_split.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_wd-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_wd-profile'  + '_split.svg'
 
     plt.savefig(fileout,dpi=300)
 
@@ -1290,9 +1290,9 @@ def plot_wind_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon
     dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_windcomp-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_windcomp-profile'  + '_split.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_windcomp-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_windcomp-profile'  + '_split.svg'
 
     plt.savefig(fileout,dpi=300)
 
@@ -1453,9 +1453,9 @@ def plot_tke_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon,
     dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_tke-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_tke-profile'  + '_split.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_tke-profile'  + '_split.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_tke-profile'  + '_split.svg'
     plt.savefig(fileout,dpi=300)
     plt.show()
 
@@ -1526,9 +1526,9 @@ def plot_tke_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon,
             ax1.set_yticklabels(ytlabels)
         dstr=datenum2date(dates[1])
         if pmonc==True:
-            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_logeps-profile'  + '_split.png'
+            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_logeps-profile'  + '_split.svg'
         else:
-            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_logeps-profile'  + '_split.png'
+            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_logeps-profile'  + '_split.svg'
         plt.savefig(fileout,dpi=300)
 
 
@@ -1607,9 +1607,9 @@ def plot_tke_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon,
 
         dstr=datenum2date(dates[1])
         if pmonc==True:
-            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_eps-profile'  + '_split.png'
+            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) + '_' +'_'.join(moutstr) + '_eps-profile'  + '_split.svg'
         else:
-            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_eps-profile'  + '_split.png'
+            fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' + '_'.join(outstr) +'_eps-profile'  + '_split.svg'
         plt.savefig(fileout,dpi=300)
 
     print ('')
@@ -1749,9 +1749,9 @@ def plot_T_Timeseries(obs,plots_out_dir, dates,prof_time, **args): #, lon, lat):
 
     dstr=datenum2date(dates[1])
     if pmonc == True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) +'_' + '_'.join(moutstr) + '_T-Timeseries'+ '.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) +'_' + '_'.join(moutstr) + '_T-Timeseries'+ '.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) + '_T-Timeseries' + '.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) + '_T-Timeseries' + '.svg'
     plt.savefig(fileout,dpi=300)
     plt.close()
 
@@ -1890,9 +1890,9 @@ def plot_Theta_Timeseries(obs,plots_out_dir, dates,prof_time, **args): #, lon, l
 
     dstr=datenum2date(dates[1])
     if pmonc == True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) +'_' + '_'.join(moutstr) + '_Theta-Timeseries'+ '.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) +'_' + '_'.join(moutstr) + '_Theta-Timeseries'+ '.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) + '_Theta-Timeseries' + '.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) + '_Theta-Timeseries' + '.svg'
     plt.savefig(fileout,dpi=300)
     plt.close()
 
@@ -2046,9 +2046,9 @@ def plot_q_Timeseries(obs,plots_out_dir, dates,prof_time, **args): #, lon, lat):
 
     dstr=datenum2date(dates[1])
     if pmonc == True:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) +'_' + '_'.join(moutstr) + '_q-Timeseries'+ '.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) +'_' + '_'.join(moutstr) + '_q-Timeseries'+ '.svg'
     else:
-        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) + '_q-Timeseries' + '.png'
+        fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs-UMGrid_' + '_'.join(outstr) + '_q-Timeseries' + '.svg'
     plt.savefig(fileout,dpi=300)
     plt.close()
 
