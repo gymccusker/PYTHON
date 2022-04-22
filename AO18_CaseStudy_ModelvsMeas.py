@@ -817,51 +817,53 @@ def plot_q_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon, l
     plt.xlim([1, 3])
     plt.legend(bbox_to_anchor=(5, 1.5), loc=4, ncol=4)
 
-    for m in range(0,len(um_data)):
-        plt.subplot(2,cols,m+2)
-        ax1 = plt.gca()
-        plt.title(label[m])
-        for pt in range(0,len(prof_time)):
-            sstr=datenum2date(prof_time[pt][0])
-            estr=datenum2date(prof_time[pt][1])
-            lstr=sstr.strftime("%H") +'-' + estr.strftime("%H") + ' UTC'
-            lnmrks=['-','--','-.']
-            if pum==True:
-                for m in range(0,1):
-                    id= np.squeeze(np.argwhere((um_data[m]['time']>=prof_time[pt][0]) & (um_data[m]['time']<prof_time[pt][1])))
-                    plt.plot(np.nanmean(um_data[m]['q'][id,:]*1000,0),um_data[m]['height'], color = lcols[pt], linewidth = 3, label = lstr, zorder = 1)
-        plt.ylim(ylims)
-        plt.yticks(yticks)
-        ax1.yaxis.set_minor_locator(ticker.MultipleLocator(100))
-        ax1.set_yticklabels(ytlabels)
-        plt.xlabel('spec. hum [g/kg]')
-        plt.ylabel('Z [km]')
-        plt.xlim([1, 3])
+    if pum==True:
+        for m in range(0,len(um_data)):
+            plt.subplot(2,cols,m+2)
+            ax1 = plt.gca()
+            plt.title(label[m])
+            for pt in range(0,len(prof_time)):
+                sstr=datenum2date(prof_time[pt][0])
+                estr=datenum2date(prof_time[pt][1])
+                lstr=sstr.strftime("%H") +'-' + estr.strftime("%H") + ' UTC'
+                lnmrks=['-','--','-.']
+                if pum==True:
+                    for m in range(0,1):
+                        id= np.squeeze(np.argwhere((um_data[m]['time']>=prof_time[pt][0]) & (um_data[m]['time']<prof_time[pt][1])))
+                        plt.plot(np.nanmean(um_data[m]['q'][id,:]*1000,0),um_data[m]['height'], color = lcols[pt], linewidth = 3, label = lstr, zorder = 1)
+            plt.ylim(ylims)
+            plt.yticks(yticks)
+            ax1.yaxis.set_minor_locator(ticker.MultipleLocator(100))
+            ax1.set_yticklabels(ytlabels)
+            plt.xlabel('spec. hum [g/kg]')
+            plt.ylabel('Z [km]')
+            plt.xlim([1, 3])
 
-    for m in range(0,len(monc_data)):
-        plt.subplot(2,cols,len(um_data)+2+m)
-        plt.title(mlabel[m])
-        ax1 = plt.gca()
-        for pt in range(0,len(prof_time)):
-            sstr=datenum2date(prof_time[pt][0])
-            estr=datenum2date(prof_time[pt][1])
-            lstr=sstr.strftime("%H") +'-' + estr.strftime("%H") + ' UTC'
-            if pmonc==True:
-                tvar=[]
-                zvar=[]
-                for m in range(0,1):
-                    tvar+=[monc_data[m]['tvar']['q_vapour_mean']]
-                    zvar+=[monc_data[m]['zvar']['q_vapour_mean']]
-                    id= np.squeeze(np.argwhere((monc_data[m][tvar[m]]>=prof_time[pt][0]) & (monc_data[m][tvar[m]]<prof_time[pt][1])))
-                    plt.plot(np.nanmean(monc_data[m]['sh'][id,:],0),monc_data[m][zvar[m]], color = lcols[pt],linewidth = 3, label = lstr, zorder = 1)
-        plt.ylim(ylims)
-        plt.yticks(yticks)
-        ax1.yaxis.set_minor_locator(ticker.MultipleLocator(100))
-        ax1.set_yticklabels(ytlabels)
-        plt.xlabel('spec. hum [g/kg]')
-        plt.ylabel('Z [km]')
-        plt.xlim([1, 3])
-    dstr=datenum2date(dates[1])
+    if pmonc == True:
+        for m in range(0,len(monc_data)):
+            plt.subplot(2,cols,len(um_data)+2+m)
+            plt.title(mlabel[m])
+            ax1 = plt.gca()
+            for pt in range(0,len(prof_time)):
+                sstr=datenum2date(prof_time[pt][0])
+                estr=datenum2date(prof_time[pt][1])
+                lstr=sstr.strftime("%H") +'-' + estr.strftime("%H") + ' UTC'
+                if pmonc==True:
+                    tvar=[]
+                    zvar=[]
+                    for m in range(0,1):
+                        tvar+=[monc_data[m]['tvar']['q_vapour_mean']]
+                        zvar+=[monc_data[m]['zvar']['q_vapour_mean']]
+                        id= np.squeeze(np.argwhere((monc_data[m][tvar[m]]>=prof_time[pt][0]) & (monc_data[m][tvar[m]]<prof_time[pt][1])))
+                        plt.plot(np.nanmean(monc_data[m]['sh'][id,:],0),monc_data[m][zvar[m]], color = lcols[pt],linewidth = 3, label = lstr, zorder = 1)
+            plt.ylim(ylims)
+            plt.yticks(yticks)
+            ax1.yaxis.set_minor_locator(ticker.MultipleLocator(100))
+            ax1.set_yticklabels(ytlabels)
+            plt.xlabel('spec. hum [g/kg]')
+            plt.ylabel('Z [km]')
+            plt.xlim([1, 3])
+        dstr=datenum2date(dates[1])
     # plt.grid('on')
     if pmonc==True:
         fileout = plots_out_dir + dstr.strftime('%Y%m%d') + '_Obs_' '_'.join(outstr) + '_' +'_'.join(moutstr) + '_q-profile'  + '_models_split.png'
