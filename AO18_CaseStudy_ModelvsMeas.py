@@ -1456,7 +1456,7 @@ def plot_tke_profiles_split(obs, plots_out_dir,dates,prof_time, **args): #, lon,
     plt.show()
 
     ####TKE DISSIPATION PLOTTING OBS & MONC
-    if len(monc_data) > 0
+    if len(monc_data) > 0:
         plt.figure(figsize=(18,8))
         plt.subplots_adjust(top = 0.8, bottom = 0.1, right = 0.92, left = 0.08)
         for pt in range(0,len(prof_time)):
