@@ -3244,7 +3244,7 @@ def main():
     obs_switch = 'UM' #RADAR
 
     if machine =='JASMIN':
-        plots_out_dir='/gws/nopw/j04/ncas_radar_vol1/gillian/PLOTS/CaseStudy/'
+        plots_out_dir='/gws/nopw/j04/ncas_radar_vol1/gillian/SHARE/' #PLOTS/CaseStudy/'
         if not os.path.exists(plots_out_dir):
             os.makedirs(plots_out_dir)
 
@@ -3470,7 +3470,7 @@ def main():
             moutstr.append('MONC-39A')
         elif m_out_dir[m][:3] == '39B':
             mlabel.append('MONC_0.1Cooper_CASIM-AP-accSolAero_timevarTurbFluxes_passProc')
-            moutstr.append('MONC-39B')            
+            moutstr.append('MONC-39B')
         else:
             label.append('undefined_label')
             moutstr.append('')
